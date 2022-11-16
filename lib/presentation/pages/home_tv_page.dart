@@ -1,10 +1,8 @@
 import 'package:ditonton/presentation/bloc/tv_bloc.dart';
 import 'package:ditonton/presentation/pages/now_playing_page.dart';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:ditonton/presentation/pages/search_page_tv.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/provider.dart';
 import 'package:ditonton/presentation/pages/about_page.dart';
 import 'package:ditonton/presentation/pages/home_movie_page.dart';
 import 'package:ditonton/presentation/pages/popular_tv_page.dart';
@@ -13,7 +11,6 @@ import 'package:ditonton/presentation/pages/tv_detail_page.dart';
 import 'package:ditonton/presentation/pages/watchlist_movies_page.dart';
 import 'package:ditonton/presentation/pages/watchlist_tv_page.dart';
 import 'package:ditonton/common/constants.dart';
-import 'package:ditonton/common/state_enum.dart';
 import 'package:ditonton/domain/entities/tv.dart';
 
 import 'package:cached_network_image/cached_network_image.dart';
