@@ -1,6 +1,7 @@
 import 'package:ditonton/domain/entities/tv_detail.dart';
 import 'package:ditonton/data/models/tv_genre_model.dart';
 import 'package:equatable/equatable.dart';
+import 'package:ditonton/data/models/season_model.dart';
 
 class TvDtlRspn extends Equatable {
   TvDtlRspn({
@@ -21,6 +22,8 @@ class TvDtlRspn extends Equatable {
     required this.numberOfSeasons,
     required this.voteAverage,
     required this.voteCount,
+    required this.seasons,
+
   });
 
   final String? backdropPath;
@@ -40,12 +43,16 @@ class TvDtlRspn extends Equatable {
   final int numberOfSeasons;
   final double voteAverage;
   final int voteCount;
+  final List<SeasonModel> seasons;
+
 
   factory TvDtlRspn.fromJson(Map<String, dynamic> json) =>
       TvDtlRspn(
         backdropPath: json["backdrop_path"],
         genres: List<Tvgnremdl>.from(
             json["genres"].map((x) => Tvgnremdl.fromJson(x))),
+        seasons: List<SeasonModel>.from(
+            json["seasons"].map((x) => SeasonModel.fromJson(x))),
         homepage: json["homepage"],
         id: json["id"],
         originalLanguage: json["original_language"],
@@ -87,6 +94,7 @@ class TvDtlRspn extends Equatable {
     return TvDet(
       backdropPath: this.backdropPath,
       genres: this.genres.map((genre) => genre.toEntity()).toList(),
+      seasons: seasons.map((season) => season.toEntity()).toList(),
       id: this.id,
       originalName: this.originalName,
       overview: this.overview,

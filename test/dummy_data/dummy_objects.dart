@@ -4,6 +4,7 @@ import 'package:ditonton/domain/entities/genre.dart';
 import 'package:ditonton/domain/entities/genre_tv.dart';
 import 'package:ditonton/domain/entities/movie.dart';
 import 'package:ditonton/domain/entities/movie_detail.dart';
+import 'package:ditonton/domain/entities/season.dart';
 import 'package:ditonton/domain/entities/tv.dart';
 import 'package:ditonton/domain/entities/tv_detail.dart';
 
@@ -83,6 +84,9 @@ final testTvList = [testTv];
 final testTvDetail = TvDet(
   backdropPath: 'backdropPath',
   genres: [Genretv(id: 1, name: 'Action')],
+  seasons: [
+    Season(id: 1, name: 'Season 1', episodeCount: 1, posterPath: 'posterPath'),
+  ],
   id: 1,
   originalName: 'originalName',
   overview: 'overview',

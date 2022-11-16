@@ -1,5 +1,6 @@
 import 'package:ditonton/domain/entities/genre_tv.dart';
 import 'package:equatable/equatable.dart';
+import 'package:ditonton/domain/entities/season.dart';
 
 class TvDet extends Equatable {
   TvDet({
@@ -15,6 +16,8 @@ class TvDet extends Equatable {
     required this.numberOfSeasons,
     required this.voteAverage,
     required this.voteCount,
+    required this.seasons,
+
   });
 
   final String? backdropPath;
@@ -29,6 +32,8 @@ class TvDet extends Equatable {
   final int numberOfSeasons;
   final double voteAverage;
   final int voteCount;
+  final List<Season> seasons;
+
 
   @override
   List<Object?> get props => [
@@ -42,5 +47,6 @@ class TvDet extends Equatable {
         name,
         voteAverage,
         voteCount,
+        seasons,
       ];
 }

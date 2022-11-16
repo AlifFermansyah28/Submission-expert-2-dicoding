@@ -201,6 +201,72 @@ class DetailTvContent extends StatelessWidget {
                               'Overview',
                               style: kHeading6,
                             ),
+                             Text(
+                              tvDetail.overview,
+                            ),
+                            const SizedBox(height: 16),
+                            Text(
+                              'Seasons and Episodes',
+                              style: kHeading6,
+                            ),
+                            SizedBox(
+                              height: 150,
+                              child: ListView.builder(
+                                scrollDirection: Axis.horizontal,
+                                itemCount: tvDetail.seasons.length,
+                                itemBuilder: (context, index) {
+                                  if (tvDetail.seasons[index].posterPath != null) {
+                                    return Row(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.all(4.0),
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                              Radius.circular(8),
+                                            ),
+                                            child: CachedNetworkImage(
+                                              imageUrl:
+                                                  'https://image.tmdb.org/t/p/w500${tvDetail.seasons[index].posterPath}',
+                                              placeholder: (context, url) =>
+                                                  const Center(
+                                                child:
+                                                    CircularProgressIndicator(),
+                                              ),
+                                              errorWidget:
+                                                  (context, url, error) =>
+                                                      const Icon(Icons.error),
+                                            ),
+                                          ),
+                                        ),
+                                        Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                                '${tvDetail.seasons[index].name}:\n${tvDetail.seasons[index].episodeCount.toString()} episodes'),
+                                          ],
+                                        ),
+                                      ],
+                                    );
+                                  } else {
+                                    return Row(
+                                      children: [
+
+                                        Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                                '${tvDetail.seasons[index].name}:\n${tvDetail.seasons[index].episodeCount.toString()} episodes'),
+                                          ],
+                                        ),
+                                      ],
+                                    );
+                                  }
+                                },
+                              ),
+                            ),
                             Text(
                               tvDetail.overview,
                             ),
@@ -231,7 +297,7 @@ class DetailTvContent extends StatelessWidget {
                                               ),
                                               child: CachedNetworkImage(
                                                 imageUrl:
-                                                    'https://image.tmdb.org/t/p/w500${tvSeries.posterPath}',
+                                                    'https://image.tmdb.org/t/p/w500${tvDetail.posterPath}',
                                                 placeholder: (context, url) =>
                                                     Center(
                                                   child:

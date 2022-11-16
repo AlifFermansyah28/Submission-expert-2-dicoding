@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:dartz/dartz.dart';
 import 'package:ditonton/common/exception.dart';
 import 'package:ditonton/common/failure.dart';
+import 'package:ditonton/data/models/season_model.dart';
 import 'package:ditonton/data/models/tv_detail_model.dart';
 import 'package:ditonton/data/models/tv_genre_model.dart';
 import 'package:ditonton/data/models/tv_model.dart';
@@ -200,6 +201,14 @@ void main() {
       numberOfSeasons: 1,
       voteAverage: 1,
       voteCount: 1,
+      seasons: [
+        SeasonModel(
+          id: 1,
+          name: 'Season 1',
+          episodeCount: 1,
+          posterPath: 'posterPath',
+        )
+      ],
     );
 
     test(
