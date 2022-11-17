@@ -28,8 +28,8 @@ import 'package:ditonton/domain/usecases/search_movies.dart';
 import 'package:ditonton/domain/usecases/search_tv.dart';
 import 'package:ditonton/domain/repositories/movie_repository.dart';
 import 'package:ditonton/domain/repositories/tv_repo.dart';
-import 'package:ditonton/presentation/bloc/movie_bloc.dart';
-import 'package:ditonton/presentation/bloc/tv_bloc.dart';
+import 'package:ditonton/presentation/bloc/movie/movie_bloc.dart';
+import 'package:ditonton/presentation/bloc/tv/tv_bloc.dart';
 import 'package:ditonton/ssl_pinning.dart';
 import 'package:get_it/get_it.dart';
 

@@ -1,5 +1,5 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:ditonton/presentation/bloc/movie_bloc.dart';
+import 'package:ditonton/presentation/bloc/movie/movie_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 class NowPlayingMoviesEventHelper extends Fake implements MovieEventBloc {}

@@ -1,4 +1,4 @@
-import 'package:ditonton/presentation/bloc/movie_bloc.dart';
+import 'package:ditonton/presentation/bloc/movie/movie_bloc.dart';
 import 'package:ditonton/presentation/pages/popular_movies_page.dart';
 import 'package:mocktail/mocktail.dart';
 

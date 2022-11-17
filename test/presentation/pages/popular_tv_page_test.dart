@@ -1,5 +1,5 @@
 
-import 'package:ditonton/presentation/bloc/tv_bloc.dart';
+import 'package:ditonton/presentation/bloc/tv/tv_bloc.dart';
 import 'package:ditonton/presentation/pages/popular_tv_page.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:flutter/material.dart';

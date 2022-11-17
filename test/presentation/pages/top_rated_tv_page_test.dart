@@ -1,4 +1,4 @@
-import 'package:ditonton/presentation/bloc/tv_bloc.dart';
+import 'package:ditonton/presentation/bloc/tv/tv_bloc.dart';
 import 'package:ditonton/presentation/pages/top_rated_tv_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

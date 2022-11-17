@@ -12,7 +12,7 @@ import 'package:ditonton/domain/usecases/get_tv_watchlist.dart';
 import 'package:ditonton/domain/usecases/get_tv_watchlist_status.dart';
 import 'package:ditonton/domain/usecases/remove_tv_watchlist.dart';
 import 'package:ditonton/domain/usecases/save_tv_watchlist.dart';
-import 'package:ditonton/presentation/bloc/tv_bloc.dart';
+import 'package:ditonton/presentation/bloc/tv/tv_bloc.dart';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';

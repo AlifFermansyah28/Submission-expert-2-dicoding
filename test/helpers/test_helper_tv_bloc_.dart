@@ -1,5 +1,5 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:ditonton/presentation/bloc/tv_bloc.dart';
+import 'package:ditonton/presentation/bloc/tv/tv_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 class NowPlayingTvSeriesHelper extends Fake implements TvSeriesEventBloc {}
