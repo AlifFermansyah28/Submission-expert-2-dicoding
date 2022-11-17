@@ -16,7 +16,7 @@ import 'package:ditonton/domain/usecases/search_movies.dart';
 part 'movie_event.dart';
 part 'movie_state.dart';
 
-// NOW PLAYING MOVIE
+/// NOW PLAYING MOVIE
 class NowPlayingMovieBloc extends Bloc<MovieEventBloc, MovieStateBloc>{
   final GetNowPlayingMovies _getNowPlayingMovie;
 
@@ -36,7 +36,7 @@ class NowPlayingMovieBloc extends Bloc<MovieEventBloc, MovieStateBloc>{
   }
 }
 
-// POPULAR MOVIE
+/// POPULAR MOVIE
 class PopularMovieBloc extends Bloc<MovieEventBloc, MovieStateBloc>{
   final GetPopularMovies _getPopularMovies;
 
@@ -56,7 +56,7 @@ class PopularMovieBloc extends Bloc<MovieEventBloc, MovieStateBloc>{
   }
 }
 
-// TOP RATED
+/// TOP RATED
 class TopRatedMovieBloc extends Bloc<MovieEventBloc, MovieStateBloc>{
   final GetTopRatedMovies _getTopRatedMovies;
 
@@ -76,7 +76,7 @@ class TopRatedMovieBloc extends Bloc<MovieEventBloc, MovieStateBloc>{
   }
 }
 
-// MOVIE DETAIL
+/// MOVIE DETAIL
 class MovieDetailBloc extends Bloc<MovieEventBloc, MovieStateBloc> {
   final GetMovieDetail _getMovieDetail;
 
@@ -173,7 +173,7 @@ class WatchlistBloc extends Bloc<MovieEventBloc, MovieStateBloc> {
   }
 }
 
-// SEARCH MOVIE
+/// SEARCH MOVIE
 class SearchBloc extends Bloc<SearchEvent, SearchState> {
   final SearchMovies _searchMovies;
 
